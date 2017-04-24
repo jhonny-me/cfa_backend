@@ -1,0 +1,19 @@
+{
+  "name": "Manager",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "namespace": {
+      "type": "belongsTo",
+      "model": "Namespace",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

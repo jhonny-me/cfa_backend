@@ -1,0 +1,55 @@
+{
+  "name": "Namespace",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "index": {
+        "unique": true
+      }
+    },
+    "decription": {
+      "type": "string"
+    },
+    "createTime": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "news": {
+      "type": "hasMany",
+      "model": "New",
+      "foreignKey": ""
+    },
+    "schedules": {
+      "type": "hasMany",
+      "model": "Schedule",
+      "foreignKey": ""
+    },
+    "videos": {
+      "type": "hasMany",
+      "model": "Video",
+      "foreignKey": ""
+    },
+    "managers": {
+      "type": "hasMany",
+      "model": "Manager",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
