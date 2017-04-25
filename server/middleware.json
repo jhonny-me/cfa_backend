@@ -31,7 +31,9 @@
     }
   },
   "session": {},
-  "auth": {},
+  "auth": {
+    "./middleware/namespaceCheck": {}
+  },
   "parse": {},
   "routes": {
     "loopback#rest": {

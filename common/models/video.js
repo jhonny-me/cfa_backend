@@ -23,4 +23,9 @@ module.exports = function(Video) {
     }
     next()
   })
+
+  Video.beforeRemote('create', function (context, instance, next) {
+    context.args.data.namespace = context.req.namespace;
+    next()
+  })
 };

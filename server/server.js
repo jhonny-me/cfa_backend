@@ -5,26 +5,6 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
-app.use(function (req, res, next) {
-  console.log(req)
-  if (req.method == 'POST' && req.url.includes('managers')) {
-    return next()
-  }
-  var namespace = req.headers.namespace;
-  if (!namespace || namespace === "" ) {
-    return next('You should put namespace in the header.')
-  }
-  var Namespace = app.models.Namespace;
-  Namespace.findOne({
-    title: namespace
-  }, function (err, result) {
-    if (err) return next(err)
-    if (!result) return next("No such namesapce");
-    req.namespace = result.id
-    next()
-  })
-});
-
 app.start = function() {
   // start the web server
   return app.listen(function() {
