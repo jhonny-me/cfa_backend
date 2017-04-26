@@ -6,6 +6,7 @@ var Manager = app.models.Manager;
 
 module.exports = function () {
     return function (req, res, next) {
+
         // register
         if (req.method == 'POST' && req.url.includes('managers')) {
             return next()

@@ -32,7 +32,13 @@
   },
   "session": {},
   "auth": {
-    "./middleware/namespaceCheck": {}
+    "./middleware/namespaceCheck": {
+      "paths": [
+        "/api/news",
+        "/api/schedules",
+        "/api/videos"
+      ]
+    }
   },
   "parse": {},
   "routes": {
