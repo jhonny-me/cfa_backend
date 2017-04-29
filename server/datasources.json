@@ -2,5 +2,12 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "googleStorage": {
+    "name": "googleStorage",
+    "connector": "loopback-component-storage",
+    "provider": "google",
+    "projectId": "rescueking-165504",
+    "keyFilename": "/Users/johnny/Backend/demos/cfa_backend/server/keys/RescueKing-3dde349b592a.json"
   }
 }

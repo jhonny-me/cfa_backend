@@ -54,5 +54,9 @@
   "Manager": {
     "dataSource": "db",
     "public": true
+  },
+  "Container": {
+    "dataSource": "googleStorage",
+    "public": true
   }
 }
