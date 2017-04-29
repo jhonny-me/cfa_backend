@@ -29,9 +29,9 @@
       "model": "Namespace",
       "foreignKey": ""
     },
-    "videos": {
-      "type": "hasOne",
-      "model": "Video",
+    "resources": {
+      "type": "hasMany",
+      "model": "Resource",
       "foreignKey": ""
     }
   },

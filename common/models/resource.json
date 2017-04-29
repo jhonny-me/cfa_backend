@@ -1,26 +1,31 @@
 {
-  "name": "Video",
+  "name": "Resource",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "title": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "uploadTime": {
-      "type": "date",
-      "required": true
-    },
-    "lastTime": {
-      "type": "number",
-      "required": true
-    },
-    "link": {
+    "type": {
       "type": "string",
       "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "coverUrl": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -28,6 +33,11 @@
     "namespace": {
       "type": "belongsTo",
       "model": "Namespace",
+      "foreignKey": ""
+    },
+    "container": {
+      "type": "belongsTo",
+      "model": "Container",
       "foreignKey": ""
     }
   },
@@ -39,15 +49,15 @@
       "permission": "DENY"
     },
     {
-      "accessType": "READ",
+      "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "admin",
       "permission": "ALLOW"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "admin",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     }
   ],

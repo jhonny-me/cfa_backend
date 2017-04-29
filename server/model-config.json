@@ -39,10 +39,6 @@
     "dataSource": "db",
     "public": true
   },
-  "Video": {
-    "dataSource": "db",
-    "public": true
-  },
   "Schedule": {
     "dataSource": "db",
     "public": true
@@ -57,6 +53,10 @@
   },
   "Container": {
     "dataSource": "googleStorage",
+    "public": true
+  },
+  "Resource": {
+    "dataSource": "db",
     "public": true
   }
 }

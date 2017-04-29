@@ -36,7 +36,7 @@
       "paths": [
         "/api/news",
         "/api/schedules",
-        "/api/videos"
+        "/api/resources"
       ]
     }
   },

@@ -32,9 +32,9 @@
       "model": "Schedule",
       "foreignKey": ""
     },
-    "videos": {
+    "resources": {
       "type": "hasMany",
-      "model": "Video",
+      "model": "Resource",
       "foreignKey": ""
     },
     "managers": {
