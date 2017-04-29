@@ -3,6 +3,7 @@
 module.exports = function(Namespace) {
 
     Namespace.available = function (namespace, cb) {
+        console.log(namespace)
         Namespace.findOne({
             title: namespace
         }, function (err, result) {
@@ -13,7 +14,7 @@ module.exports = function(Namespace) {
 
     Namespace.remoteMethod(
         'available', {
-            accepts: {arg: 'namespace', type: 'string'},
+            accepts: {arg: 'title', type: 'string', required: true},
             returns: {arg: 'result', type: 'bool'}
         }
     )
