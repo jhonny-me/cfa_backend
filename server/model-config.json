@@ -14,41 +14,41 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mlabMongo"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": false
   },
   "Namespace": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": true
   },
   "Schedule": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": true
   },
   "New": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": true
   },
   "Manager": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": true
   },
   "Container": {
@@ -56,7 +56,7 @@
     "public": true
   },
   "Resource": {
-    "dataSource": "db",
+    "dataSource": "mlabMongo",
     "public": true
   }
 }

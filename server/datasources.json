@@ -9,5 +9,15 @@
     "provider": "google",
     "projectId": "rescueking-165504",
     "keyFilename": "server/keys/RescueKing-3dde349b592a.json"
+  },
+  "mlabMongo": {
+    "host": "ds113841.mlab.com",
+    "port": 13841,
+    "url": "mongodb://johnny:www.cfa.com@ds113841.mlab.com:13841/cfa",
+    "database": "cfa",
+    "password": "www.cfa.com",
+    "name": "mlabMongo",
+    "user": "johnny",
+    "connector": "mongodb"
   }
 }
