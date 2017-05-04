@@ -3,6 +3,7 @@
  */
 var app = require('../server');
 var Manager = app.models.Manager;
+const {ERRORS} = require('../../common/lib/constant');
 
 module.exports = function () {
     return function (req, res, next) {
@@ -18,14 +19,14 @@ module.exports = function () {
         }
         var namespace = req.headers.namespace;
         if (!namespace || namespace === "") {
-            return next('You should put namespace in the header.')
+            return next(ERRORS.namespaceNeeded)
         }
         var Namespace = app.models.Namespace;
         Namespace.findOne({
             title: namespace
         }, function (err, result) {
             if (err) return next(err)
-            if (!result) return next("No such namesapce");
+            if (!result) return next(ERRORS.namespaceNotFound);
             req.namespace = result.id
             next()
         })
